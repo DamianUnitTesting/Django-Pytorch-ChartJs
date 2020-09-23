@@ -1,0 +1,37 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<canvas id="myChart2" width="200" height="200"></canvas>
+<script>
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+    gradientStroke.addColorStop(0, "#80b6f4");
+    gradientStroke.addColorStop(1, "#f49080");
+
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+            datasets: [{
+                label: "Data",
+                borderColor: '#1d1817',
+                pointBorderColor: gradientStroke,
+                pointBackgroundColor: gradientStroke,
+                pointHoverBackgroundColor: gradientStroke,
+                pointHoverBorderColor: gradientStroke,
+                backgroundColor: [
+                '#fc5c65',
+                '#fd9644',
+                '#fed330',
+                '#26de81',
+                '#2bcbba',
+                '#EA2027',
+                '#B53471',
+                ],
+                data: [80, 20, 50, 75, 18, 34, 160]
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
+</script>   

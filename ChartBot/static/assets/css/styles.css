@@ -1,0 +1,46 @@
+body {
+    background-color: #1d1817;
+
+}
+
+.navbar {
+    background-color: #161616;
+    color:white;
+
+}
+
+.navbar-brand {
+    color:white;
+    font-weight: bold;
+}
+
+.box {
+    border: 20px solid transparent;
+    background-clip:padding-box;
+    }
+
+.card {
+    background-color: #1d1817;
+    border:none;
+}
+
+.card-body {
+    background-color: #1d1817;
+}
+
+.container-fluid {
+    background-color: #161616;
+}
+
+.content {
+    background-color: #1d1817;
+}
+
+.footer {
+    background-color: black;
+}
+
+.card-header {
+    background-color: black;
+    color:white;
+}

@@ -1,0 +1,39 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<canvas id="myChart1" width="200" height="200"></canvas>
+<script>
+    var ctx = document.getElementById('myChart1').getContext('2d');
+
+    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+    gradientStroke.addColorStop(0, "#80b6f4");
+    gradientStroke.addColorStop(0.2, "#94d973");
+    gradientStroke.addColorStop(0.5, "#fad874");
+    gradientStroke.addColorStop(1, "#f49080");
+
+    var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+            datasets: [{
+                label: "Data",
+                borderColor: gradientStroke,
+                pointBorderColor: gradientStroke,
+                pointBackgroundColor: gradientStroke,
+                pointHoverBackgroundColor: gradientStroke,
+                pointHoverBorderColor: gradientStroke,
+                //backgroundColor: gradientStroke,
+                data: [100, 120, 150, 170, 180, 170, 160]
+            }]
+        },
+        options: {
+            scale: {
+              gridLines: {
+                color: gradientStroke
+              },
+              angleLines: {
+                color: gradientStroke 
+              }
+            }
+          }
+        });
+</script>   
